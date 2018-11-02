@@ -1,0 +1,502 @@
+Starting Dynare (version 4.5.1).
+Starting preprocessing of the model file ...
+Found 11 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+Processing outputs ...
+done
+Preprocessing completed.
+[Warning: Some of the parameters have no value (lambda, sigma_c, sigma_l, xi_p, rho, r_pi, r_dy, pi_bar, gamma,
+r_bar, rho_d, rho_s) when using steady. If these parameters are not initialized in a steadystate file or a
+steady_state_model-block, Dynare may not be able to solve the model...] 
+STEADY:  numerical initial values or parameters incompatible with the following equations
+     1     2     3     4     6     7     8     9    10    11
+
+Check whether your model is truly linear. Put "resid(1);" before "steady;" to see the problematic equations.
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : NaN
+Equation number 2 : NaN
+Equation number 3 : NaN
+Equation number 4 : NaN
+Equation number 5 : NaN
+Equation number 6 : NaN
+Equation number 7 : NaN
+Equation number 8 : NaN
+Equation number 9 : NaN
+Equation number 10 : NaN
+Equation number 11 : NaN
+
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('print_info', 'C:\dynare\4.5.1\matlab\print_info.m', 90)" style="font-weight:bold">print_info</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\print_info.m',90,0)">line 90</a>)
+The steady state contains NaN or Inf
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('steady', 'C:\dynare\4.5.1\matlab\steady.m', 104)" style="font-weight:bold">steady</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\steady.m',104,0)">line 104</a>)
+    print_info(info,options_.noprint, options_);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 191)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',191,0)">line 191</a>)
+steady;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)
+evalin('base',fname) ;
+} 
+dynare versionIJF_REE;
+Using 64-bit preprocessor
+Starting Dynare (version 4.5.1).
+Starting preprocessing of the model file ...
+Found 11 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+h       		 -3.69561e-18
+y       		 -3.69561e-18
+pinf    		 -1.11022e-16
+mc      		 -1.29346e-17
+l       		 -3.69561e-18
+r       		 -1.11022e-16
+eps_d   		 0
+eps_s   		 0
+dy      		 0.5
+pinfobs 		 0.5
+robs    		 1
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0
+Equation number 2 : 0
+Equation number 3 : 0
+Equation number 4 : 0
+Equation number 5 : 0
+Equation number 6 : 0
+Equation number 7 : 0
+Equation number 8 : 0
+Equation number 9 : 0
+Equation number 10 : 0
+Equation number 11 : 0
+
+
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+Initial value of the log posterior (or likelihood): -14851.9827
+
+                                Max     Line search  Directional  First-order 
+ Iter F-count        f(x)   constraint   steplength   derivative   optimality Procedure 
+    0     16        14852      -0.0913                                         
+STEADY:  numerical initial values or parameters incompatible with the following equations
+     2
+
+Check whether your model is truly linear. Put "resid(1);" before "steady;" to see the problematic equations.
+    1     33      1321.56      -0.1267          0.5    -4.51e+04     3.65e+05   
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.5.1\matlab\evaluate_steady_state.m', 263)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\evaluate_steady_state.m',263,0)">line 263</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 104)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',104,0)">line 104</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+    2     55       1288.8      -0.1557       0.0156         -978     1.95e+04   
+    3     73      1172.57      -0.1258         0.25        -85.5          550   
+    4     90      1004.02     -0.06292          0.5        -71.7     1.87e+03   
+    5    108      885.565     -0.04719         0.25         -297     4.17e+03   
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  7.900242e-40.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.5.1\matlab\evaluate_steady_state.m', 263)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\evaluate_steady_state.m',263,0)">line 263</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 104)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',104,0)">line 104</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.200581e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dyn_first_order_solver', 'C:\dynare\4.5.1\matlab\dyn_first_order_solver.m', 313)" style="font-weight:bold">dyn_first_order_solver</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dyn_first_order_solver.m',313,0)">line 313</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stochastic_solvers', 'C:\dynare\4.5.1\matlab\stochastic_solvers.m', 264)" style="font-weight:bold">stochastic_solvers</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\stochastic_solvers.m',264,0)">line 264</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 144)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',144,0)">line 144</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+    6    125      587.707      -0.0346          0.5    -1.02e+03     2.86e+03   
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.5.1\matlab\evaluate_steady_state.m', 263)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\evaluate_steady_state.m',263,0)">line 263</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 104)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',104,0)">line 104</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+    7    145      560.633     -0.03244       0.0625         -189     2.07e+03   
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.5.1\matlab\evaluate_steady_state.m', 263)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\evaluate_steady_state.m',263,0)">line 263</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 104)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',104,0)">line 104</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+    8    163      519.202     -0.02433         0.25        -91.3     1.25e+03   
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.5.1\matlab\evaluate_steady_state.m', 263)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\evaluate_steady_state.m',263,0)">line 263</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 104)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',104,0)">line 104</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+    9    181       434.14     -0.01825         0.25        -93.9          584   
+   10    199      414.683     -0.01369         0.25        -71.4     1.16e+04   
+   11    219      405.505     -0.01456       0.0625        -33.6     5.96e+03   
+STEADY:  numerical initial values or parameters incompatible with the following equations
+     2
+
+Check whether your model is truly linear. Put "resid(1);" before "steady;" to see the problematic equations.
+   12    237      390.383     -0.01692         0.25        -43.5     2.97e+03   
+STEADY:  numerical initial values or parameters incompatible with the following equations
+     2
+
+Check whether your model is truly linear. Put "resid(1);" before "steady;" to see the problematic equations.
+   13    258      388.094      -0.0164       0.0313          -58     3.27e+03   
+STEADY:  numerical initial values or parameters incompatible with the following equations
+     2
+
+Check whether your model is truly linear. Put "resid(1);" before "steady;" to see the problematic equations.
+   14    276      384.889     -0.01387         0.25        -23.5     3.94e+03   
+   15    297      382.129     -0.01343       0.0313        -38.8     1.47e+03   
+   16    315      380.828     -0.01821         0.25        -15.9          274   
+   17    335      378.734       -0.018       0.0625        -52.8          819   
+STEADY:  numerical initial values or parameters incompatible with the following equations
+     2
+
+Check whether your model is truly linear. Put "resid(1);" before "steady;" to see the problematic equations.
+   18    354      374.306     -0.01736        0.125        -15.2          216   
+   19    373      371.737     -0.01519        0.125        -7.42          773   
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.5.1\matlab\evaluate_steady_state.m', 263)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\evaluate_steady_state.m',263,0)">line 263</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 104)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',104,0)">line 104</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+   20    391      369.364     -0.01197         0.25        -11.8          371   
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.5.1\matlab\evaluate_steady_state.m', 263)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\evaluate_steady_state.m',263,0)">line 263</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('resol', 'C:\dynare\4.5.1\matlab\resol.m', 104)" style="font-weight:bold">resol</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\resol.m',104,0)">line 104</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_resolve', 'C:\dynare\4.5.1\matlab\dynare_resolve.m', 69)" style="font-weight:bold">dynare_resolve</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_resolve.m',69,0)">line 69</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.1\matlab\dsge_likelihood.m', 252)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dsge_likelihood.m',252,0)">line 252</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nlconst', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m', 752)" style="font-weight:bold">nlconst</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\nlconst.m',752,0)">line 752</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p', 748)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\shared\optimlib\fmincon.p',748,0)">line 748</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m', 83)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\optimization\dynare_minimize_objective.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+   21    410      367.915     -0.01161        0.125        -7.23          621   
+   22    429      367.909     -0.01145        0.125        -5.71          393   
+   23    447      367.662     -0.01008         0.25        -14.4     2.16e+03   
+   24    466      367.453     -0.01081        0.125        -3.64     1.49e+03   
+   25    485      366.981     -0.01116        0.125        -15.7     1.04e+03   
+   26    502      366.602    -0.005578          0.5        -4.62     1.61e+03   
+   27    522      366.276    -0.008293       0.0625        -9.74     1.05e+03   
+   28    540      365.631    -0.009682         0.25        -15.1         46.5   
+   29    558      365.484    -0.009072         0.25        -7.34          597   
+   30    574       365.23    -0.007994            1        -3.81         55.2   
+   31    590      365.112    -0.007271            1         -1.5         52.4   
+   32    606      364.864    -0.005551            1        -2.13         67.7   
+   33    622       364.75    -0.005099            1        -1.09          123   
+   34    638      364.643    -0.005399            1        -2.64          120   
+   35    654      364.585    -0.004862            1       -0.966         80.1   
+   36    670      364.548    -0.005047            1       -0.788          124   
+   37    686      364.517    -0.005425            1       -0.615         47.6   
+   38    702      364.513    -0.005502            1       -0.767         39.2   
+   39    718      364.512    -0.005497            1       -0.201         18.8   
+   40    734       364.51     -0.00552            1       -0.163         13.5  Hessian modified  
+   41    750      364.507     -0.00557            1       -0.135           32   
+   42    766      364.505    -0.005646            1       -0.126         26.3   
+   43    782      364.504    -0.005684            1       -0.142         8.74   
+   44    798      364.504    -0.005695            1      -0.0709         1.33  Hessian modified  
+   45    814      364.504    -0.005702            1      -0.0692         9.97  Hessian modified  
+   46    830      364.503    -0.005713            1      -0.0976         24.5  Hessian modified  
+   47    846      364.502    -0.005731            1       -0.137         47.2  Hessian modified  
+   48    862      364.498    -0.005761            1       -0.178         84.8  Hessian modified  
+   49    878      364.487    -0.005809            1        -0.21          147   
+   50    894      364.458    -0.005887            1       -0.232          255   
+   51    910      364.385    -0.006005            1       -0.248          456   
+   52    926       364.22    -0.006131            1       -0.264          861   
+   53    942       363.94     -0.00606            1       -0.314      1.4e+03   
+   54    958      363.342     -0.00549            1       -0.511     1.64e+03   
+   55    974      362.578    -0.004146            1       -0.916          188   
+   56    991      362.225    -0.004257          0.5       -0.733     1.43e+03   
+   57   1007      361.789     -0.00477            1       -0.753          740   
+   58   1023      361.245    -0.005061            1        -3.77          479   
+   59   1039      361.155    -0.005286            1       -0.843     1.76e+03   
+   60   1055      360.517    -0.005564            1        -2.67         25.1   
+   61   1071      360.014    -0.005553            1        -1.92          396   
+   62   1087      359.693    -0.005455            1       -0.686          928   
+   63   1103      359.391    -0.005448            1        -6.79          705   
+   64   1119      358.299    -0.005347            1        -1.36          739   
+   65   1135      357.265    -0.005206            1        -3.96          190   
+   66   1152       356.82    -0.005253          0.5        -1.23          586   
+   67   1168      356.209    -0.005319            1        -3.88          258   
+   68   1184      355.389    -0.005293            1        -2.79          206   
+   69   1201      354.903    -0.005281          0.5        -1.66          290   
+   70   1217      354.235    -0.005575            1        -4.06          178   
+   71   1233      353.774    -0.005971            1        -3.63          124   
+   72   1249       353.17    -0.006262            1        -2.42         93.6   
+   73   1266      352.925    -0.006752          0.5        -18.2         40.9   
+   74   1283      352.571    -0.007511          0.5        -2.14         32.8   
+   75   1299       352.43    -0.009071            1        -1.78         73.7   
+   76   1315      352.106     -0.01152            1        -6.04          145   
+   77   1332      351.707     -0.01706          0.5        -8.28          179   
+   78   1348      351.354     -0.02167            1        -6.07          158   
+   79   1364      350.301     -0.02505            1        -12.3         49.6   
+   80   1380      349.872     -0.02794            1        -4.61          205   
+   81   1397       349.58     -0.02817          0.5        -4.92         47.7   
+   82   1413      349.109     -0.03196            1        -5.83         24.7   
+   83   1430      348.888     -0.03663          0.5        -2.78         58.4   
+   84   1446      348.851     -0.04173            1        -1.69          291   
+   85   1462      348.422     -0.04157            1        -24.3         31.1   
+   86   1478      348.123     -0.04506            1        -2.06         62.5   
+   87   1495      347.913     -0.04894          0.5        -1.23          103   
+   88   1511      347.584     -0.05419            1        -1.59          284   
+   89   1527      346.866     -0.05257            1        -3.16          104   
+   90   1544      346.708     -0.04699          0.5        -1.42          414   
+   91   1560      345.271     -0.04731            1        -12.1           85   
+   92   1576      344.642     -0.04265            1        -1.51          549   
+   93   1592      343.967     -0.04515            1        -9.59          411   
+   94   1609      343.488     -0.04362          0.5        -9.73          178   
+   95   1625      342.558     -0.03931            1        -1.76          656   
+   96   1641      341.967     -0.03984            1        -6.03         71.6   
+   97   1657      341.293      -0.0371            1        -1.28         75.6   
+   98   1674      340.635     -0.03263          0.5        -1.16          628   
+   99   1690      339.727     -0.03214            1        -1.42          221   
+  100   1706      339.304     -0.02946            1        -1.08          141   
+  101   1723      339.079     -0.02661          0.5       -0.616          647   
+  102   1739       339.03     -0.02793            1        -4.82          465   
+  103   1755       338.82     -0.02738            1        -2.99         54.1   
+  104   1771      338.747     -0.02624            1       -0.292          235   
+  105   1787      338.698     -0.02616            1       -0.458          107   
+  106   1803      338.647     -0.02559            1       -0.203         22.7   
+  107   1819      338.634     -0.02539            1       -0.117         14.5   
+  108   1835      338.612     -0.02497            1      -0.0991         16.2   
+  109   1851      338.579     -0.02462            1       -0.151         63.4   
+  110   1867      338.536     -0.02393            1       -0.121         23.6   
+  111   1883      338.486     -0.02379            1       -0.245          120   
+  112   1899      338.451     -0.02365            1       -0.208           70   
+  113   1915      338.425     -0.02408            1       -0.327         77.5   
+  114   1931      338.416     -0.02433            1       -0.175         10.7   
+  115   1947      338.413     -0.02458            1       -0.103         7.06   
+  116   1963      338.412     -0.02462            1       -0.146         6.04   
+  117   1979      338.411      -0.0246            1      -0.0154         2.39   
+  118   1995      338.411     -0.02457            1     -0.00794         2.32  Hessian modified  
+  119   2011      338.411     -0.02454            1     -0.00657         2.97  Hessian modified  
+  120   2027      338.411     -0.02452            1      -0.0097         3.92  Hessian modified  
+  121   2043      338.411      -0.0245            1      -0.0175         5.19  Hessian modified  
+  122   2059       338.41     -0.02448            1      -0.0397         6.85  Hessian modified  
+  123   2075       338.41     -0.02448            1      -0.0721         9.18  Hessian modified  
+  124   2091      338.408     -0.02451            1      -0.0591         12.2  Hessian modified  
+  125   2107      338.403     -0.02462            1      -0.0471         13.8  Hessian modified  
+  126   2123      338.393     -0.02495            1       -0.041          4.2   
+  127   2139      338.378     -0.02565            1      -0.0382           94   
+  128   2155      338.361     -0.02579            1      -0.0939         50.2   
+  129   2171      338.349     -0.02629            1      -0.0582           66   
+  130   2188      338.348     -0.02619          0.5      -0.0414         6.33   
+  131   2204      338.347     -0.02628            1      -0.0161         12.8   
+  132   2220      338.346      -0.0264            1     -0.00823         18.9  Hessian modified  
+  133   2236      338.346     -0.02647            1     -0.00745         11.9  Hessian modified  
+  134   2252      338.346     -0.02653            1     -0.00599         2.05  Hessian modified  
+  135   2268      338.346     -0.02655            1     -0.00196       0.0395  Hessian modified  
+  136   2284      338.346     -0.02655            1     -0.00143        0.156  Hessian modified  
+  137   2300      338.346     -0.02655            1    -0.000414       0.0366  Hessian modified  
+  138   2316      338.346     -0.02655            1    -5.55e-05      0.00124  Hessian modified  
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_poss_with_constr','CSHelpWindow');">Local minimum possible. Constraints satisfied</a>.
+
+fmincon stopped because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'pred_change','CSHelpWindow');">predicted change in the objective function</a>
+is less than the selected value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a> and constraints 
+are satisfied to within the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg('nlconst',5.000000e+00,true,true,'fmincon',1.252762e-09,'selected',1.000000e-08,-2.654618e-02,'default',1.000000e-06,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+No active inequalities.
+
+Final value of minus the log posterior (or likelihood):338.345957 
+
+POSTERIOR KERNEL OPTIMIZATION PROBLEM!
+ (minus) the hessian matrix at the "mode" is not positive definite!
+=> posterior variance of the estimated parameters are not positive.
+You should try to change the initial values of the parameters using
+the estimated_params_init block, or use another optimization routine.
+[Warning: The results below are most likely wrong!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.1\matlab\dynare_estimation_1.m', 316)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation_1.m',316,0)">line 316</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.1\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('versionIJF_REE', 'c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m', 230)" style="font-weight:bold">versionIJF_REE</a> (<a href="matlab: opentoline('c:\users\tolga\desktop\thesisNKPC_Estimation\versionIJF_REE.m',230,0)">line 230</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.1\matlab\dynare.m', 223)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.1\matlab\dynare.m',223,0)">line 223</a>)] 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+      prior mean     mode    s.d. prior pstdev
+
+lambda    0.700   0.9146  0.0164 beta  0.1000 
+sigma_c   1.000   1.3302  0.2544 norm  0.3750 
+sigma_l   2.000   2.1500  0.5954 norm  0.7500 
+xi_p      0.750   0.9735  0.0000 beta  0.1500 
+r_pi      1.500   1.4805  0.1383 norm  0.2500 
+rho       0.800   0.8049  0.0225 beta  0.1000 
+r_dy      0.125   0.2042  0.0475 norm  0.0500 
+r_bar     1.500   1.2461  0.1640 gamm  0.2500 
+pi_bar    0.500   0.7802  0.1165 gamm  0.1500 
+gamma     0.750   0.3371  0.0238 gamm  0.1500 
+rho_d     0.500   0.3703  0.0757 beta  0.2000 
+rho_s     0.500   0.9355  0.0273 beta  0.2000 
+
+standard deviation of shocks
+      prior mean     mode    s.d. prior pstdev
+
+eta_d     0.200  11.9516  1.8458 invg  2.0000 
+eta_s     0.400   8.7671  0.0000 invg  2.0000 
+eta_r     0.100   0.3017  0.0150 invg  2.0000 
+
+
+Log data density [Laplace approximation] is -364.507545.
+
+
+MODEL SUMMARY
+
+  Number of variables:         11
+  Number of stochastic shocks: 3
+  Number of state variables:   4
+  Number of jumpers:           3
+  Number of static variables:  5
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables         eta_d       eta_s       eta_r
+eta_d        142.841343    0.000000    0.000000
+eta_s          0.000000   76.862645    0.000000
+eta_r          0.000000    0.000000    0.090999
+
+POLICY AND TRANSITION FUNCTIONS
+                                   h               y            pinf              mc               l               r           eps_d           eps_s              dy         pinfobs            robs
+Constant                           0               0               0               0               0               0               0               0        0.337093        0.780174        1.246088
+y(-1)                       0.049897        0.918875        0.021052        2.041976        0.918875        0.002849               0               0       -0.081125        0.021052        0.002849
+r(-1)                      -2.899512       -0.247575       -0.042238       -4.389345       -0.247575        0.782850               0               0       -0.247575       -0.042238        0.782850
+eps_s(-1)                   0.144739        0.012359       -0.028662       -2.727840       -0.923174       -0.007786               0        0.935533        0.012359       -0.028662       -0.007786
+eps_d(-1)                   0.273703        0.023370        0.001329        0.414337        0.023370        0.001315        0.370294               0        0.023370        0.001329        0.001315
+eta_d                       0.739151        0.063112        0.003590        1.118942        0.063112        0.003551        1.000000               0        0.063112        0.003590        0.003551
+eta_s                       0.154713        0.013210       -0.030637       -2.915814       -0.986790       -0.008322               0        1.000000        0.013210       -0.030637       -0.008322
+eta_r                      -3.602283       -0.307581       -0.052476       -5.453215       -0.307581        0.972593               0               0       -0.307581       -0.052476        0.972593
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+h             -0.0000    11.4206   130.4300
+y             -0.0000     5.7432    32.9849
+pinf          -0.0000     0.6730     0.4529
+mc            -0.0000    65.3109  4265.5167
+l             -0.0000    21.7418   472.7067
+r             -0.0000     0.9329     0.8702
+eps_d          0.0000    12.8662   165.5397
+eps_s          0.0000    24.8192   615.9942
+dy             0.3371     0.8813     0.7768
+pinfobs        0.7802     0.6730     0.4529
+robs           1.2461     0.9329     0.8702
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+            eta_d   eta_s   eta_r
+h           68.67   28.96    2.38
+y           22.99   74.45    2.56
+pinf         1.27   98.41    0.32
+mc           6.02   93.63    0.35
+l            1.60   98.22    0.18
+r            1.61   73.15   25.23
+eps_d      100.00    0.00    0.00
+eps_s        0.00  100.00    0.00
+dy          84.13   13.56    2.31
+pinfobs      1.27   98.41    0.32
+robs         1.61   73.15   25.23
+
+
+
+MATRIX OF CORRELATIONS
+Variables          h        y     pinf       mc        l        r    eps_d    eps_s       dy  pinfobs     robs
+h             1.0000   0.5663  -0.4289  -0.2896  -0.4505  -0.4731   0.8285   0.5257   0.8652  -0.4289  -0.4731
+y             0.5663   1.0000  -0.4678  -0.4194  -0.4417  -0.6265   0.2127   0.6183   0.0767  -0.4678  -0.6265
+pinf         -0.4289  -0.4678   1.0000   0.9882   0.9983   0.7274   0.0813  -0.9827  -0.2343   1.0000   0.7274
+mc           -0.2896  -0.4194   0.9882   1.0000   0.9827   0.7165   0.2329  -0.9579  -0.0952   0.9882   0.7165
+l            -0.4505  -0.4417   0.9983   0.9827   1.0000   0.7357   0.0562  -0.9782  -0.2763   0.9983   0.7357
+r            -0.4731  -0.6265   0.7274   0.7165   0.7357   1.0000   0.0709  -0.7895  -0.1913   0.7274   1.0000
+eps_d         0.8285   0.2127   0.0813   0.2329   0.0562   0.0709   1.0000   0.0000   0.8728   0.0813   0.0709
+eps_s         0.5257   0.6183  -0.9827  -0.9579  -0.9782  -0.7895   0.0000   1.0000   0.2598  -0.9827  -0.7895
+dy            0.8652   0.0767  -0.2343  -0.0952  -0.2763  -0.1913   0.8728   0.2598   1.0000  -0.2343  -0.1913
+pinfobs      -0.4289  -0.4678   1.0000   0.9882   0.9983   0.7274   0.0813  -0.9827  -0.2343   1.0000   0.7274
+robs         -0.4731  -0.6265   0.7274   0.7165   0.7357   1.0000   0.0709  -0.7895  -0.1913   0.7274   1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order           1       2       3       4       5       6       7       8       9      10
+h          0.5471  0.3722  0.2999  0.2652  0.2445  0.2290  0.2155  0.2031  0.1913  0.1800
+y          0.9882  0.9671  0.9419  0.9148  0.8866  0.8578  0.8286  0.7993  0.7698  0.7405
+pinf       0.9143  0.8366  0.7659  0.7013  0.6422  0.5882  0.5388  0.4935  0.4522  0.4143
+mc         0.8918  0.8072  0.7353  0.6716  0.6141  0.5618  0.5141  0.4706  0.4308  0.3943
+l          0.9166  0.8389  0.7668  0.7002  0.6389  0.5826  0.5309  0.4835  0.4402  0.4005
+r          0.9367  0.8753  0.8166  0.7611  0.7088  0.6596  0.6135  0.5705  0.5302  0.4927
+eps_d      0.3703  0.1371  0.0508  0.0188  0.0070  0.0026  0.0010  0.0004  0.0001  0.0000
+eps_s      0.9355  0.8752  0.8188  0.7660  0.7166  0.6704  0.6272  0.5868  0.5489  0.5136
+dy         0.3977  0.1708  0.0825  0.0453  0.0271  0.0161  0.0080  0.0013 -0.0046 -0.0098
+pinfobs    0.9143  0.8366  0.7659  0.7013  0.6422  0.5882  0.5388  0.4935  0.4522  0.4143
+robs       0.9367  0.8753  0.8166  0.7611  0.7088  0.6596  0.6135  0.5705  0.5302  0.4927
+Total computing time : 0h00m29s
+Note: warning(s) encountered in MATLAB/Octave code

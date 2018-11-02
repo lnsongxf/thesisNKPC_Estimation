@@ -1,0 +1,66 @@
+clear;clc;close all;
+%load ('varREE.mat');
+load('varBLE2.mat');
+
+omegaGrid=50; 
+paraGrid=50; 
+  phi_y_grid = linspace(0,50,paraGrid);
+  phi_pi_grid = linspace(1,50,paraGrid);
+  omega_grid=linspace(0.5,.999,omegaGrid);
+  
+  for jj=1:omegaGrid
+
+omega=omega_grid(jj);%weight on inflation variance;
+
+objective_BLE=gapVar_BLE*(1-omega)+infVar_BLE*omega;
+%objective_REE=gapVar_REE*(1-omega)+infVar_REE*omega;
+
+ %minREE=min(min(objective_REE));
+ %[minREE_ind(1),minREE_ind(2)]=find(objective_REE==minREE);
+
+minBLE=min(min(objective_BLE));
+[minBLE_ind(1),minBLE_ind(2)]=find(objective_BLE==minBLE);
+
+optimalPara_BLE(jj,:)=[phi_y_grid(minBLE_ind(1)),phi_pi_grid(minBLE_ind(2))];
+%optimalPara_REE(jj,:)=[phi_y_grid(minREE_ind(1)),phi_pi_grid(minREE_ind(2))];
+
+  end
+  
+ SR_BLE_pi=diff(infVar_BLE(30,1:end)').\diff(gapVar_BLE(30,1:end)');%changes in variances along phi_pi dimension
+ %SR_BLE_pi(SR_BLE_pi>0)=0;%set to 0 if there is no trade-off
+ SR_BLE_y=diff(infVar_BLE(1:end,30)).\diff(gapVar_BLE(1:end,30));%changes in variances along phi_y dimension 
+ %SR_BLE_y(SR_BLE_y>0)=0;%set to 0 if there is no trade-off
+ 
+ %SR_REE_pi=diff(infVar_REE(30,1:end)').\diff(gapVar_REE(30,1:end)');%changes in variances along phi_pi dimension
+ %SR_REE_pi(SR_REE_pi>0)=0;%set to 0 if there is no trade-off
+ %SR_REE_y=diff(infVar_REE(1:end,30)).\diff(gapVar_REE(1:end,30));%changes in variances along phi_y dimension 
+ %SR_REE_y(SR_REE_y>0)=0;%set to 0 if there is no trade-off
+ 
+ figure('Name','Sacrifice Ratios');
+ subplot(2,1,1);
+ plot(SR_BLE_pi,'color','black');
+ %hold on;
+ %plot(SR_REE_pi,'color','red');
+ %legend('BLE','REE');
+ title('along \phi_y dimension');
+ 
+  subplot(2,1,2);
+ plot(SR_BLE_y,'color','black');
+ %hold on;
+ %plot(SR_REE_y,'color','red');
+ %legend('BLE','REE');
+ title('along \phi_{\pi} dimension');
+  
+  figure('Name','Optimal Taylor coefficients as a function of omega');
+  subplot(2,1,1);
+  plot(omega_grid,optimalPara_BLE(:,1),'color','black');
+  %hold on;
+  %plot(omega_grid,optimalPara_REE(:,1),'color','red');
+  %legend('BLE','REE');
+  title('\phi_y');
+  subplot(2,1,2);
+  plot(omega_grid,optimalPara_BLE(:,2),'color','black');
+  %hold on;
+  %plot(omega_grid,optimalPara_REE(:,2),'color','red');
+  legend('BLE','REE');
+  title('\phi_{\pi}');
