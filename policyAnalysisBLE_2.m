@@ -7,14 +7,14 @@ clc;
 %estimated parameters:  rho_y=0.4267,rho_pinf=0.3085
 %parameters=[ 3.02       0.99      0.037     0.4267     0.3085       0.4903      1.3609      0     0.7322    0.2908      0] ;
 %calibrated parameters:
-parameters=[  3.02           0.99      0.037      0.53         0.43            0.4         1.5      0      0.7322        0.2908   0];
+parameters=[ 3.02         0.99      0.037      0.33        0.43            0.4         1.5      0      0.7322        0.2908   0];
 numVar=5;
 paraGrid=20; 
 %   phi_y_grid = linspace(0.13,0.97,paraGrid);
 %   phi_pi_grid = linspace(0.84,1.98,paraGrid);
   
-  phi_y_grid = linspace(0,200,paraGrid);
-  phi_pi_grid = linspace(1,200,paraGrid);
+  phi_y_grid = linspace(0,10,paraGrid);
+  phi_pi_grid = linspace(1,50,paraGrid);
   
     varCovar=[parameters(9)^2,0,0;0,parameters(10)^2,0;0,0,parameters(11)^2];
     varCovar_vec=reshape(varCovar,[length(varCovar)^2,1]);
@@ -80,6 +80,6 @@ end
 gapVar_BLE(gapVar_BLE<0)=Inf;
 infVar_BLE(infVar_BLE<0)=Inf;
 
-    save varBLE3.mat gapVar_BLE infVar_BLE;
+    save varBLE4.mat gapVar_BLE infVar_BLE;
     
 

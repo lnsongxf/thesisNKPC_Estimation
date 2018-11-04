@@ -1,14 +1,15 @@
 clear;
 clc;
 
-total=50;
+total=20;
 iterations=0;
 
  
-    
+phi_y_grid=linspace(0,200,total);
+phi_pi_grid=linspace(2,200,total);
 
-  phi_y_grid = linspace(0.13,0.97,total);
-  phi_pi_grid = linspace(0.84,1.98,total);
+%   phi_y_grid = linspace(0.13,0.97,total);
+%   phi_pi_grid = linspace(0.84,1.98,total);
 
 infVar_REE=zeros(total,total);
 gapVar_REE=zeros(total,total);
