@@ -1,0 +1,204 @@
+
+%parameters=[beta y_bar pi_bar r_bar kappa tau phi_pi phi_y rho_y rho_pi rho_r
+%eps_y eps_pi eps_r
+clear;clc;%close all;
+tic
+paraNo1=6;%phi_y
+paraNo2=7;%phi_pinf
+gridLength1=100;
+gridLength2=100;
+gridUpper1=0.4;gridLower1=0.2;
+gridUpper2=1.5;gridLower2=1.01;
+
+
+paraGrid1=linspace(gridLower1,gridUpper1,gridLength1);
+paraGrid2=linspace(gridLower2,gridUpper2,gridLength2);
+
+% parameters=[0.5880 0.6671 0.8063 0.01 3 1.5 0.55 0.75 0.75 0.8 0.7 0.3 0.3];
+parameters=[ 2.65         0.99      0.024     0.42        0.31            0.36       1.41      0.88      0.74        0.29   0.29];%CBO ESTIMATES
+%parameters=[ 2.92         0.99      0.017     0.42        0.31            0.22        1.44      0.88      0.78        0.3   0.3];%de-trended output
+%parameters=[ 3.02         0.99      0.035    0.43        0.32      0.49        1.36      0.85      0.73        0.29   0.29];%hp-filtered---baseline
+
+%parameters=[0 0 0 0.024 2.6476 1.41 0.36 0.42 0.308 0.88 0.73 0.29 0.29];
+varCovar=[parameters(9)^2,0,0;0,parameters(10)^2,0;0,0,parameters(11)^2];
+varCovar_vec=reshape(varCovar,[length(varCovar)^2,1]);
+numVar=5;
+N=500;
+numSimul=10;
+betaGrid=linspace(0.1,0.99,numSimul);
+betaPiFinal=nan(numSimul,gridLength1,gridLength2);
+betaYFinal=nan(numSimul,gridLength1,gridLength2);
+
+
+
+
+ options=optimoptions('lsqnonlin',...
+     'MaxFunEvals',999,'maxIter',999,...
+ 'tolFun',10e-15);
+
+
+for AA=1:gridLength1
+    for BB=1:gridLength2
+toc
+    disp((BB-1)+(AA-1)*gridLength2);
+    parameters(paraNo1)=paraGrid1(AA);
+     parameters(paraNo2)=paraGrid2(BB);
+
+[Atotal, Btotal, Ctotal, Dtotal]=NKPC_matrixConverter(parameters);
+
+auxiliary_function=@(beta) function_g(beta,Atotal,Btotal,Ctotal,Dtotal,varCovar);
+
+gamma1=Atotal^(-1)*Btotal;
+gamma2=Atotal^(-1)*Ctotal;
+gamma3=Atotal^(-1)*Dtotal;
+
+betaY=nan(N+1,numSimul);betaPi=nan(N+1,numSimul);
+for k=1:numSimul
+
+beta_init=betaGrid(k)*diag( ones(numVar,1));
+    
+    
+beta=zeros(numVar,numVar,N);
+beta(:,:,1) =    betaGrid(k)*diag( ones(numVar,1));
+for i=1:N
+    
+    betaAux = beta(:,:,i);
+
+    M=gamma1+gamma2*betaAux^2;
+    
+vec0=(eye(numVar^2)-kron(M,M))^(-1)*kron(gamma3,gamma3)*varCovar_vec;
+    vec1=(kron(eye(numVar),gamma1)+kron(eye(numVar),gamma2*betaAux^2))*vec0;
+    
+    for j=1:numVar
+     beta(j,j,i+1)=vec1( (j-1)*numVar+j)/vec0( (j-1)*numVar+j);
+    
+    end
+end
+
+%   soln=lsqnonlin(auxiliary_function,diag(beta_init),...
+%     -999*ones(numVar,1),999*ones(numVar,1),options);
+% 
+% beta(:,:,1)=diag(soln);
+
+
+    betaY(:,k)=beta(1,1,end);
+    betaPi(:,k)=beta(2,2,end);
+
+end
+betaYFinal(:,AA,BB)=betaY(end,:);
+betaPiFinal(:,AA,BB)=betaPi(end,:);
+
+        end
+    end
+
+
+
+eqm_pinf=zeros(gridLength1,gridLength2);
+eqm_gap=zeros(gridLength1,gridLength2);
+for AA=1:gridLength1
+    for BB=1:gridLength2
+
+pinf=unique(round(betaPiFinal(:,AA,BB),3));
+gap=unique(round(betaYFinal(:,AA,BB),3));
+%====================================
+%unique stationary==1
+if length(pinf)==1 && sum((double(abs(pinf)<1)))==length(pinf)
+    eqm_pinf(AA,BB)=1;
+
+%multiple stationary==2
+elseif length(pinf)>1 && sum((double(abs(pinf)<1)))==length(pinf)
+    eqm_pinf(AA,BB)=2;
+    
+ %unique non-stationary   
+elseif length(pinf)==1 && sum(double(abs(pinf)>1))==length(pinf)
+    eqm_pinf(AA,BB)=3;
+ 
+    %multiple non-stationary
+elseif length(pinf)>1 && sum(double(abs(pinf)>1))==length(pinf)
+    eqm_pinf(AA,BB)=4;
+    
+elseif length(pinf)>1 && sum(double(abs(pinf)>1))<length(pinf) && sum(double(abs(pinf)<1))<length(pinf)
+   eqm_pinf(AA,BB)=5;
+end
+%====================================
+
+
+%====================================
+%unique stationary==1
+if length(gap)==1 &&  sum((double(abs(gap)<1)))==length(gap)
+    eqm_gap(AA,BB)=1;
+
+%multiple stationary==2
+elseif length(gap)>1 && sum((double(abs(gap)<1)))==length(gap)
+    eqm_gap(AA,BB)=2;
+    
+ %unique non-stationary   
+elseif length(gap)==1 && sum(double(abs(gap)>1))==length(gap)
+    eqm_gap(AA,BB)=3;
+ 
+    %multiple non-stationary
+elseif length(gap)>1 && sum(double(abs(gap)>1))==length(gap)
+    eqm_gap(AA,BB)=4;
+    
+
+%====================================
+%multiple stationary & non-stationary mixed
+elseif length(gap)>1 && sum(double(abs(gap)>1))<length(gap) && sum(double(abs(gap)<1))<length(gap)
+   eqm_gap(AA,BB)=5;
+end
+
+        end
+end
+
+
+
+
+figure('Name','Output Gap');
+   for AA=1:gridLength1
+    for BB=1:gridLength2
+scatter3(paraGrid1(AA)*ones(numSimul,1),paraGrid2(BB)*ones(numSimul,1),...
+    betaYFinal(:,AA,BB),'filled''MarkerEdgeColor','k',...
+        'MarkerFaceColor','k','SizeData',100);
+hold on;
+    end
+   end
+  
+   figure('Name','Inflation');
+     for AA=1:gridLength1
+    for BB=1:gridLength2
+scatter3(paraGrid1(AA)*ones(numSimul,1),paraGrid2(BB)*ones(numSimul,1),...
+    betaPiFinal(:,AA,BB),'filled''MarkerEdgeColor','k',...
+        'MarkerFaceColor','k','SizeData',100);
+hold on;
+    end
+   end
+
+
+
+
+
+
+
+
+
+% 
+% % only plot unique vs multiple
+eqm_pinf(eqm_pinf==3)=3;
+eqm_pinf(eqm_pinf==4)=2;
+eqm_pinf(eqm_pinf==5)=2;
+
+eqm_gap(eqm_gap==3)=3;
+eqm_gap(eqm_gap==4)=2;
+eqm_gap(eqm_gap==5)=2;
+
+
+figure;
+subplot(2,1,1);
+surf(paraGrid1,paraGrid2,eqm_pinf);
+view(0, 90);
+subplot(2,1,2);
+surf(paraGrid1,paraGrid2,eqm_gap);
+view(0, 90);
+
+
+
